@@ -1,5 +1,19 @@
-<div class="block" [class.rtl]="rtl">
+<div
+  class="block"
+  [style.direction]="direction"
+  [style.writing-mode]="writingMode"
+>
   <div class="inside">
-    <button (click)="rtl=!rtl">Toogle direction (ltr/rtl)</button>
+    <select [(ngModel)]="direction">
+      <option value="ltr">ltr</option>
+      <option value="rtl">rtl</option>
+    </select>
+    <select [(ngModel)]="writingMode">
+      <option value="horizontal-tb">horizontal-tb</option>
+      <option value="vertical-rl">vertical-rl</option>
+      <option value="vertical-lr">vertical-lr</option>
+      <option value="sideways-lr">sideways-lr</option>
+      <option value="sideways-rl">sideways-rl</option>
+    </select>
   </div>
 </div>
